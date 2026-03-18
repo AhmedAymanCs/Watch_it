@@ -23,19 +23,13 @@ class SettingsScreen extends StatelessWidget {
           elevation: 0,
           scrolledUnderElevation: 0,
           title: Text(AppStrings.settings, style: AppStyle.bold20),
-          actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 16),
-              child: Icon(Icons.settings, color: AppColors.textDark),
-            ),
-          ],
         ),
         body: BlocBuilder<SettingsCubit, SettingsStates>(
           builder: (context, state) {
             final cubit = context.read<SettingsCubit>();
             if (state is SettingsLoading) {
               return const Center(
-                child: CircularProgressIndicator(color: AppColors.primaryGreen),
+                child: CircularProgressIndicator(color: AppColors.primaryBlue),
               );
             }
             if (state is SettingsError) {
@@ -63,8 +57,8 @@ class SettingsScreen extends StatelessWidget {
                   SettingsItem(
                     icon: Icons.play_circle_outline,
                     label: AppStrings.youtubeChannel,
-                    iconContainerColor: AppColors.iconContainerGreen,
-                    iconColor: AppColors.primaryGreen,
+                    iconContainerColor: AppColors.iconContainerBlue,
+                    iconColor: AppColors.primaryBlue,
                     onTap: () => openUrl(context, profile.youtubeUrl),
                   ),
                   const SizedBox(height: 24),
@@ -74,7 +68,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Icons.info_outline,
                     label: AppStrings.aboutDeveloper,
                     iconContainerColor: AppColors.iconContainerGrey,
-                    iconColor: AppColors.primaryGreen,
+                    iconColor: AppColors.primaryBlue,
                     onTap: () {
                       if (profile.aboutDeveloper != null) {
                         openUrl(context, profile.aboutDeveloper!);

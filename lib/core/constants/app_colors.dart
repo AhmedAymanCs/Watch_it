@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   // ── Primary ──
-  static const Color primaryGreen = Color(0xFF2E7D32);
-  static const Color primaryGreenLight = Color(0xFFE8F5E9);
+  static const Color primaryBlue = Color(0xFF1A73E8);
+  static const Color primaryBlueLight = Color(0xFFE8F0FE);
+  static const Color primaryBlueDark = Color(0xFF0D47A1);
 
   // ── Text ──
   static const Color textDark = Color(0xFF212121);
@@ -12,11 +13,11 @@ class AppColors {
 
   // ── UI Elements ──
   static const Color scaffoldBackground = Colors.white;
-  static const Color iconContainerGreen = Color(0xFFE8F5E9);
+  static const Color iconContainerBlue = Color(0xFFE8F0FE);
   static const Color iconContainerGrey = Color(0xFFEEEEEE);
   static const Color divider = Color(0xFFE0E0E0);
 
   // ── Bottom Nav ──
-  static const Color navActive = Color(0xFF2E7D32);
+  static const Color navActive = Color(0xFF1A73E8);
   static const Color navInactive = Color(0xFF9E9E9E);
 }

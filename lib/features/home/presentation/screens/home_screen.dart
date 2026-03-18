@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: AppColors.scaffoldBackground,
         appBar: AppBar(
-          backgroundColor: AppColors.primaryGreen,
+          backgroundColor: AppColors.primaryBlue,
           centerTitle: true,
           title: Text(AppStrings.appTitle, style: AppStyle.bold18),
           elevation: 0,
@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
             final cubit = context.read<HomeCubit>();
             if (state is HomeLoading) {
               return const Center(
-                child: CircularProgressIndicator(color: AppColors.primaryGreen),
+                child: CircularProgressIndicator(color: AppColors.primaryBlue),
               );
             }
             if (state is HomeError) {

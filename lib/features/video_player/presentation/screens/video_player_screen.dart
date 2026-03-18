@@ -53,13 +53,13 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen>
       player: YoutubePlayer(
         controller: _controller,
         showVideoProgressIndicator: true,
-        progressIndicatorColor: AppColors.primaryGreen,
+        progressIndicatorColor: AppColors.primaryBlue,
       ),
       builder: (context, player) {
         return Scaffold(
           backgroundColor: AppColors.scaffoldBackground,
           appBar: AppBar(
-            backgroundColor: AppColors.primaryGreen,
+            backgroundColor: AppColors.primaryBlue,
             centerTitle: true,
             title: Text(widget.title, style: AppStyle.bold18),
             iconTheme: const IconThemeData(color: AppColors.textWhite),
