@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:watch_it/core/constants/app_colors.dart';
-import 'package:watch_it/core/constants/app_strings.dart';
 import 'package:watch_it/core/constants/image_manager.dart';
 import 'package:watch_it/core/routing/routes.dart';
 import 'package:watch_it/splash/logic/cubit.dart';

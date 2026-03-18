@@ -26,7 +26,6 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen>
 
   @override
   void initState() {
-    print(widget.videoId);
     super.initState();
     _controller = YoutubePlayerController(
       initialVideoId: widget.videoId,
