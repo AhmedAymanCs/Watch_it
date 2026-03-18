@@ -1,20 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:watch_it/video_screen.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'core/networking/supabase_service.dart';
+import 'core/routing/app_router.dart';
+import 'core/routing/routes.dart';
+import 'core/constants/app_colors.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
+  await SupabaseService.init();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Watch It',
-      home: VideosScreen(),
+      theme: ThemeData(
+        useMaterial3: true,
+        scaffoldBackgroundColor: AppColors.scaffoldBackground,
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryGreen),
+      ),
+      onGenerateRoute: AppRouter.generateRoute,
+      initialRoute: Routes.home,
     );
   }
 }
